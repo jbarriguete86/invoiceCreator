@@ -1,9 +1,85 @@
-<html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        
-        <script src="index.js"></script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inovice Creator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+
+</head>
+<body>
+    <header>
+        <h1>Invoice creator</h1>
+        <p>Thanks for choosing GoodCorp, LLC!</p>
+    </header>
+    <main>
+        <form class="input--cont">
+            <input type="text" id="task" placeholder="Enter task">
+            <select name="prices--opts" id="prices--opts">
+                <option value="10">$10</option>
+                <option value="15">$15</option>
+                <option value="20">$20</option>
+                <option value="25">$25</option>
+                <option value="30">$30</option>
+                <option value="35">$35</option>
+                <option value="40">$40</option>
+                <option value="45">$45</option>
+                <option value="50">$50</option>
+            </select>
+            <button id="add--btn">+</button>
+        </form>
+        <div class="inputs--container">
+            <div class="inputs--header">
+                <p>TASK</p>
+                <p>TOTAL</p>
+            </div>
+            <div class="inputs--information">
+                <div class="input--info">
+                    <p id="wash--car">Wash Car</p>
+                    <button class="remove--btn">remove</button>
+                    <p><span class="dollar">$</span>10</p>
+                </div>
+                <div class="input--info">
+                    <p id="wash--car">Mow Lawn</p>
+                    <button class="remove--btn">remove</button>
+                    <p><span class="dollar">$</span>20</p>
+                </div>
+                <div class="input--info">
+                    <p id="wash--car">Remove weed</p>
+                    <button class="remove--btn">remove</button>
+                    <p><span class="dollar">$</span>20</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <table class="sum--table">
+            <thead>
+                <tr>
+                    <th>Notes</th>
+                    <th>TOTAL AMOUNT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>We accept cash credit card or PayPal</td>
+                    <!-- will be fill in with js -->
+                    <td id="sum--table--total">$60</td>
+                </tr>
+            </tbody>
+        </table>
+        <button><i class="fa-solid fa-envelope"></i> Send invoice</button>
+        <input type="range" id="dark" class="mode--slider" min="0" max="1" value="0" name="dark mode">
+        <label for="dark mode">Light mode</label>
+    </main>
+    <footer>
+        <p><span>&copy</span>Joshe Producciones</p>
+    </footer>
+    <script src="index.js" type="module"></script>
+</body>
 </html>

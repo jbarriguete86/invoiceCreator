@@ -1,4 +1,146 @@
-html, body {
+*{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+:root{
+    --light-mode-header: #F5F5F5;
+    --dark-mode-header: #3A69D2;
+    --light-mode-bckg: #FFFFFF;
+    --dark-mode-bckg: #1F2937;
+    --light-mode-text:#4A4E74;
+    --dark-mode-text:#F5F5F5;
+}
+
+body{
+    background-color: var(--light-mode-bckg);
+    font-family: "Inter", sans-serif;
+    color: var(--light-mode-text)
+}
+
+
+/* HEADER */
+header{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-mode-header);
+    width: 100%;
+    padding: 2.5em 0;
+    align-items: center;
+}
+
+header > h1{
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+header > p{
+    font-size: .75rem;
+}
+
+/* MAIN */
+main{
+    display: flex;
+    flex-direction: column;
+    padding: 1em 1.5em 1em;
+}
+
+/* INPUT FORM */
+form{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+#task, 
+select,
+#add--btn{
+   border: #D5D4D8 1px solid;
+}
+
+#task{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    padding: .4em 0 .4em .4em;
+    min-width: 70%;
+}
+
+select{
+    background-color: #F0F0F0;
+    min-width: 20%;
+}
+
+#add--btn{
+    min-width: 10%;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: #3A69D2;
+    color: #ffffff;
+}
+
+/* INPUT TABLE */
+.inputs--container,
+.inputs--header,
+.inputs--information,
+.input--info{
+    display: flex;
+}
+
+.inputs--container,
+.inputs--information{
+    flex-direction: column;
+}
+
+.inputs--container{
+    width: 100%;
+    margin: 1.5em 0 1em;
+    gap: 1em;
+    font-weight: bold;
+}
+
+.inputs--header{
+    justify-content: space-between;
+}
+
+.inputs--header,
+.dollar{
+    color:#918E9B;
+}
+
+.inputs--header > p{
+    font-weight: bold;
+    font-size: .75rem;
+}
+
+.inputs--information{
+    justify-content: space-evenly;
+    gap: 1em
+}
+
+.input--info{
+    width: 100%;
+    /* justify-content: space-between; */
+}
+
+.remove--btn{
+    border:none;
+    background-color: var(--light-mode-bckg);
+    font-size: 0.6rem;
+    margin-left: .4em;
+}
+
+.remove--btn:hover{
+    cursor: pointer;
+    color: red;
+}
+
+.input--info > p:last-child{
+    font-weight: 500;
+    margin-left: auto;
+}
+.dollar{
+    font-weight: 200;
+}
+
+
+
