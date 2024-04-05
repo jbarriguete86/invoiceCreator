@@ -14,6 +14,9 @@
 }
 
 body{
+    display: flex;
+    height: 100dvh;
+    flex-direction: column;
     background-color: var(--light-mode-bckg);
     font-family: "Inter", sans-serif;
     color: var(--light-mode-text)
@@ -119,12 +122,11 @@ select{
 
 .input--info{
     width: 100%;
-    /* justify-content: space-between; */
 }
 
 .remove--btn{
     border:none;
-    background-color: var(--light-mode-bckg);
+    background-color: transparent;
     font-size: 0.6rem;
     margin-left: .4em;
 }
@@ -142,5 +144,143 @@ select{
     font-weight: 200;
 }
 
+/* RESULTS */
+hr{
+    border: none;
+    border-top:1px solid #C3C6DB;
+    margin: 1em 0 1.5em;
+}
+
+.sum--table,
+.sum--header,
+.sum--results{
+    display: flex
+}
+
+.sum--table{
+    flex-direction: column;
+    gap: 1em;
+}
+
+.sum--header,
+.sum--results{
+    justify-content: space-between;
+}
 
 
+.sum--header > p{
+    color: #918E9B;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.sum--results{
+    align-items: center;
+    margin-bottom: 1.5em;
+
+}
+
+.sum--results > p:first-child{
+    font-size: 0.65rem;
+}
+
+.sum--total{
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+/* BUTTONS */
+
+.send--btn{
+   background-color: #3770ED;
+   color: #FFFFFF;
+   font-family: "Inter", sans-serif;
+   padding: 10px 0;
+   border: none;
+   border-radius: 7px;
+   margin-bottom: 1em;;
+}
+
+.mode--container{
+    display: flex;
+    width: 25%;
+    gap: 10px;
+    margin-left:auto;
+    margin-top: 1em;
+}
+
+.mode--container > input{
+    width: 75%;
+}
+.mode--container > label{
+    font-size: .75rem;
+}
+
+/* DARK MODE FEATURE */
+.darkMode--body{
+    background-color: var(--dark-mode-bckg);
+    color: var(--dark-mode-text)
+}
+
+.darkMode--header{
+    background-color: var(--dark-mode-header);
+}
+
+.darkMode--remove{
+    color:#D5D4D8;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 700px) {
+   
+    header > h1{
+        font-weight: bolder;
+        font-size: 4rem;
+    }
+    
+    header > p{
+        font-size: 1.5rem;
+    }
+
+    main{
+        align-self: center;
+        width:75%;
+        font-size: 2rem;
+    }
+
+    .inputs--header > p,
+    .sum--header > p{
+        font-size: 1rem;
+    }
+
+    .sum--results > p:first-child{
+        font-size: 0.95rem;
+    }   
+    .sum--total{
+        font-size: 3rem;
+    } 
+
+    #task,
+    #prices--opts > option{
+        font-size: 1rem;
+    }
+
+    #add--btn,
+    .send--btn{
+        font-size: 1.5rem;
+    }
+
+    .mode--container{
+        margin: 0;
+    }
+
+    .mode--container > input{
+        width: 45%;
+
+    }
+    .mode--container > label{
+        font-size: .75rem;
+    }
+    
+}

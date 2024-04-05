@@ -40,46 +40,28 @@
                 <p>TOTAL</p>
             </div>
             <div class="inputs--information">
-                <div class="input--info">
-                    <p id="wash--car">Wash Car</p>
-                    <button class="remove--btn">remove</button>
-                    <p><span class="dollar">$</span>10</p>
-                </div>
-                <div class="input--info">
-                    <p id="wash--car">Mow Lawn</p>
-                    <button class="remove--btn">remove</button>
-                    <p><span class="dollar">$</span>20</p>
-                </div>
-                <div class="input--info">
-                    <p id="wash--car">Remove weed</p>
-                    <button class="remove--btn">remove</button>
-                    <p><span class="dollar">$</span>20</p>
-                </div>
+                <!-- fill in with js -->
             </div>
         </div>
         <hr>
-        <table class="sum--table">
-            <thead>
-                <tr>
-                    <th>Notes</th>
-                    <th>TOTAL AMOUNT</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>We accept cash credit card or PayPal</td>
-                    <!-- will be fill in with js -->
-                    <td id="sum--table--total">$60</td>
-                </tr>
-            </tbody>
-        </table>
-        <button><i class="fa-solid fa-envelope"></i> Send invoice</button>
-        <input type="range" id="dark" class="mode--slider" min="0" max="1" value="0" name="dark mode">
-        <label for="dark mode">Light mode</label>
+        <div class="sum--table">
+            <div class="sum--header">
+                <p>NOTES</p>
+                <p>TOTAL AMOUNT</p>
+            </div>
+            <div class="sum--results" id="sum--results">
+                <p>We accept cash credit card or PayPal</p>
+                <p class="sum--total">
+                    $<span class="sum--total--value"></span><!-- fill in with js -->
+                </p>
+            </div>
+        </div>
+        <button id="send--btn" class="send--btn"><i class="fa-solid fa-envelope"></i> Send invoice</button>
+        <div class="mode--container">
+            <input type="range" id="dark--mode" class="mode--slider" min="0" max="1" value="0" name="dark mode">
+            <label for="dark mode" id="dark--label">Light mode</label>
+        </div>
     </main>
-    <footer>
-        <p><span>&copy</span>Joshe Producciones</p>
-    </footer>
     <script src="index.js" type="module"></script>
 </body>
 </html>
