@@ -21,7 +21,4 @@ export default function getTasks(task, price, contentContainer, mode){
     taskContainer.appendChild(priceElement)
 
     contentContainer.appendChild(taskContainer)
-
-
-  
 }

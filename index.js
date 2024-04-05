@@ -37,7 +37,6 @@ addBtn.addEventListener('click', (e)=>{
 
 document.addEventListener('click', (e)=>{
     if (e.target.classList.contains("remove--btn")){
-        console.log('clicked on a remove button')
         const parentContainer = e.target.parentElement
         const priceToRemove=`-${parentContainer.lastElementChild.innerText.substring(1)}`
         getResults(totalCount, totalInvoice,parseInt(priceToRemove))
