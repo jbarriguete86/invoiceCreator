@@ -58,8 +58,16 @@
         </div>
         <button id="send--btn" class="send--btn"><i class="fa-solid fa-envelope"></i> Send invoice</button>
         <div class="mode--container">
-            <input type="range" id="dark--mode" class="mode--slider" min="0" max="1" value="0" name="dark mode">
-            <label for="dark mode" id="dark--label">Light mode</label>
+            <label id="dark--label" for="changeTheme">
+                <input type="checkbox" id="changeTheme" /> <span class="slide"></span>
+            </label>
+            <div class="txt">
+                <p>Light</p>
+                <p>Dark</p>
+            </div>
+
+            <!-- <input type="range" id="dark--mode" class="mode--slider" min="0" max="1" value="0" name="dark mode">
+            <label for="dark mode" id="dark--label">Light mode</label> -->
         </div>
     </main>
     <script src="index.js" type="module"></script>

@@ -6,12 +6,14 @@ const taskInput = document.getElementById('task')
 const priceInput = document.getElementById('prices--opts')
 const addBtn=document.getElementById('add--btn')
 const sendBtn= document.getElementById('send--btn')
-const darkModeInput= document.getElementById('dark--mode')
+let darkModeInput= document.getElementById('changeTheme')
+
+
 
 // SETTER ELEMENTS
 const tasks= document.querySelector('.inputs--information')
 const totalInvoice= document.querySelector('.sum--total--value')
-const darkModeLabel=document.getElementById('dark--label')
+const darkModeLabel= document.querySelector('.txt')
 const headerEl=document.querySelector('header')
 
 // DATA STORAGE ELEMENTS
@@ -52,18 +54,15 @@ sendBtn.addEventListener('click', ()=>{
 })
 
 darkModeInput.addEventListener('input', ()=>{
-    if(darkModeInput.value == 1){
-        darkModeLabel.innerText = 'Dark mode'
-        document.body.classList.add('darkMode--body')
-        headerEl.classList.add('darkMode--header')
-        darkMde = !darkMde
-    } else {
-        darkModeLabel.innerText = 'Light mode'
-        document.body.classList.remove('darkMode--body')
-        headerEl.classList.remove('darkMode--header')
-        darkMde = !darkMde
-    }
+    console.log(darkModeInput.checked)
 
+    if(darkModeInput.checked){
+        darkMode()
+
+    }   else {
+        noDark()
+    }
+    
     const taskElements = document.querySelectorAll('.input--info');
     taskElements.forEach(taskElement => {
         if (darkMde) {
@@ -73,3 +72,17 @@ darkModeInput.addEventListener('input', ()=>{
         }
     })
 })
+
+function darkMode(){
+    document.body.classList.add('darkMode--body')
+    headerEl.classList.add('darkMode--header')
+    darkModeLabel.classList.add('darkMode--label')
+    darkModeInput.checked = true
+}
+
+function noDark(){
+    document.body.classList.remove('darkMode--body')
+    headerEl.classList.remove('darkMode--header')
+    darkModeLabel.classList.remove('darkMode--label')
+    darkModeInput.checked = false
+}
